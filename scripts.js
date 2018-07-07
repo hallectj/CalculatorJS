@@ -160,7 +160,7 @@ function createExpression(arr){
 //checks for proper floating point numbers or integers.  Returns false if two or more decimals.  Basically a proper number
 //For example 3.44.8 or 3..448 would be returned false, because there are two decimal symbols.
 function isNumberCorrect(str){
-    var numberRegex = /^\-?\s*(?=.*[1-9])\d*(?:\.\d{1,})?\s*$/g;
+    var numberRegex = /^\-?\s*(?=.*[0-9])\d*(?:\.\d{1,})?\s*$/g;
     if(numberRegex.test(str)){
        return true;
     }
