@@ -37,7 +37,7 @@ function displayWhileTyping(){
         }else if($(this).html() === "clr"){
             clear("clr");
         }else{
-            if($(this).html() === "(-)"){
+            if($(this).html() === "(-)"){ 
                 var n = displayDiv.html();
                 n = n * -1;
                 displayDiv.html(n);
