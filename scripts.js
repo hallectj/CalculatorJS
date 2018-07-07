@@ -90,7 +90,6 @@ function displayWhileTyping(){
                         }
                         
                         if(!isNumberCorrect(userValues[i].substr(0, userValues[i].length-1))){
-                            console.log("userVals: ", userValues[i].substr(0, userValues[i].length-1))
                             errorsFound = true;
                             answer = "error";
                             break;
@@ -116,7 +115,7 @@ function displayWhileTyping(){
                     }
                     
                     if(answer > 999999999 && !errorsFound){
-                        answer = answer.toExponential();
+                        answer = answer.toExponential(7);
                     }else if(isNaN(parseFloat(answer)) || errorsFound){
                         answer = "error";
                     }
@@ -161,7 +160,7 @@ function createExpression(arr){
 //checks for proper floating point numbers or integers.  Returns false if two or more decimals.  Basically a proper number
 //For example 3.44.8 or 3..448 would be returned false, because there are two decimal symbols.
 function isNumberCorrect(str){
-    var numberRegex = /^\s*(?=.*[1-9])\d*(?:\.\d{1,})?\s*$/g;
+    var numberRegex = /^\-?\s*(?=.*[1-9])\d*(?:\.\d{1,})?\s*$/g;
     if(numberRegex.test(str)){
        return true;
     }
