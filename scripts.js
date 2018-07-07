@@ -99,10 +99,10 @@ function displayWhileTyping(){
                     var expression = createExpression(userValues);
                     
                     if(!/[error]/g.test(expression)){
-                        if(expression.length < 50){
+                        if(expression.length < 31){
                             $("#exprDiv").html(expression);
                         }else{
-                            $("#exprDiv").html(expression.substr(0, 50) + "...")
+                            $("#exprDiv").html(expression.substr(0, 28) + "...")
                         }
                     }
 
