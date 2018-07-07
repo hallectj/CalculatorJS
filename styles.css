@@ -38,6 +38,7 @@ html, body {
     width: 45px;
     height: 45px;
     padding: 10px;
+    border-radius: 50%;
 }
 
 #calculator-wrapper{
